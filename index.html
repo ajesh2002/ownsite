@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ajesh — Developer & Builder</title>
+  <meta name="description" content="Personal website of Ajesh: projects, skills and contact." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">ajesh<span>.</span></a>
+      <nav>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button class="theme-toggle" aria-label="Toggle dark mode">◐</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Hi, I'm</p>
+        <h1>Ajesh<span class="accent">.</span></h1>
+        <p class="tagline">I build <span class="typed" data-words="websites,apps,ideas,things people use"></span><span class="cursor">|</span></p>
+        <p class="lead">Developer and founder at Lemind Innovations. I like turning rough ideas into fast, simple, useful products.</p>
+        <div class="cta">
+          <a href="#projects" class="btn primary">See my work</a>
+          <a href="#contact" class="btn ghost">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="container grid-2">
+        <div>
+          <h2>About me</h2>
+          <p>I'm a builder who enjoys the whole journey: sketching an idea, writing the code, shipping it, and making it better based on real feedback.</p>
+          <p>When I'm not coding, I'm learning something new, exploring design, or working on the next side project.</p>
+        </div>
+        <ul class="stats">
+          <li><strong data-count="5">0</strong><span>Years building</span></li>
+          <li><strong data-count="20">0</strong><span>Projects shipped</span></li>
+          <li><strong data-count="100">0</strong><span>Cups of coffee / month</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section alt reveal">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="section-sub">A few things I've worked on.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">🚀</div>
+            <h3>Lemind Innovations</h3>
+            <p>A studio for building digital products, from early prototypes to full launches.</p>
+            <div class="tags"><span>Product</span><span>Strategy</span></div>
+          </article>
+          <article class="card">
+            <div class="card-icon">🌐</div>
+            <h3>ownsite</h3>
+            <p>This website. Handwritten HTML, CSS and JavaScript, with no frameworks or build step.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <a class="card-link" href="https://github.com/ajesh2002/ownsite" target="_blank" rel="noopener">View code →</a>
+          </article>
+          <article class="card">
+            <div class="card-icon">✨</div>
+            <h3>Next big thing</h3>
+            <p>Something new is in the works. Check back soon, or ask me about it.</p>
+            <div class="tags"><span>Coming soon</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <div class="container">
+        <h2>Skills</h2>
+        <p class="section-sub">Tools and technologies I work with.</p>
+        <ul class="skills">
+          <li>JavaScript</li><li>TypeScript</li><li>React</li><li>Node.js</li>
+          <li>Python</li><li>HTML &amp; CSS</li><li>SQL</li><li>Git</li>
+          <li>UI Design</li><li>Cloud</li><li>APIs</li><li>Product</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt reveal">
+      <div class="container narrow">
+        <h2>Let's talk</h2>
+        <p class="section-sub">Have a project, question or idea? Send me a message.</p>
+        <form class="contact-form" data-email="lemindinnovations@gmail.com">
+          <label>Name<input name="name" required autocomplete="name" /></label>
+          <label>Email<input name="email" type="email" required autocomplete="email" /></label>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
+          <button type="submit" class="btn primary">Send message</button>
+        </form>
+        <div class="socials">
+          <a href="https://github.com/ajesh2002" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:lemindinnovations@gmail.com">Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Ajesh · Built by hand</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
